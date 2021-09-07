@@ -9,8 +9,10 @@ namespace SEProjectBE.Data
 {
     public partial class DemoContext : DbContext
     {
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<Product> Products { get; set; }
+       
 
-        
         public DemoContext()
         {
              
@@ -22,7 +24,18 @@ namespace SEProjectBE.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           
+            modelBuilder.Entity<ShoppingCart>(entity =>
+            {
+                entity.ToTable("ShoppingCarts");
+
+                entity.HasKey(e => e.Id);
+
+
+                entity.HasMany(e => e.Products)
+                .WithOne(e => e.ShoppingCart)
+                .HasForeignKey(e => e.ShoppingCartId);
+            });
+
 
             OnModelCreatingPartial(modelBuilder);
         }
