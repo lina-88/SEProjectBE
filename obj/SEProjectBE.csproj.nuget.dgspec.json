@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj": {}
+    "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj": {}
   },
   "projects": {
-    "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj": {
+    "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj",
+        "projectUniqueName": "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj",
         "projectName": "SEProjectBE",
-        "projectPath": "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj",
-        "packagesPath": "C:\\Users\\Lina\\.nuget\\packages\\",
-        "outputPath": "E:\\Schneider Internship\\SE Project BE\\obj\\",
+        "projectPath": "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "D:\\internships\\se\\Project 2\\SEProjectBE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\Schneider Internship\\Resources\\ASP code(demo)\\demo\\nugetpackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +54,7 @@
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.18, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -66,10 +65,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.9, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -90,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -132,7 +132,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.JsonPatch/3.1.9": {
+      "Microsoft.AspNetCore.JsonPatch/3.1.18": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -145,10 +145,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.9": {
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.18": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "3.1.9",
+          "Microsoft.AspNetCore.JsonPatch": "3.1.18",
           "Newtonsoft.Json": "12.0.2",
           "Newtonsoft.Json.Bson": "1.0.2"
         },
@@ -606,7 +606,7 @@
           }
         }
       },
-      "Newtonsoft.Json/13.0.1": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -1758,10 +1758,10 @@
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.JsonPatch/3.1.9": {
-      "sha512": "ugsTdK5wlmwZQ1Y4rvIoqci4uCQ7dgtAIG8cFlvB+3hXdDlECkE8xxoUrFgmZ4TGIuUwRpmWp5pvjX1n8gzJeg==",
+    "Microsoft.AspNetCore.JsonPatch/3.1.18": {
+      "sha512": "2Fuv4qa8u2f5rWRDhnMMaxFLxyN/BCezDEa1NciMSePB1aojRnX4NYZeOjISHOY/71abulriz8dBpgc/k7GADw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.jsonpatch/3.1.9",
+      "path": "microsoft.aspnetcore.jsonpatch/3.1.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1769,14 +1769,14 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
-        "microsoft.aspnetcore.jsonpatch.3.1.9.nupkg.sha512",
+        "microsoft.aspnetcore.jsonpatch.3.1.18.nupkg.sha512",
         "microsoft.aspnetcore.jsonpatch.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.9": {
-      "sha512": "uc2OLoGtc8YIJDsGD2NqdzhFcinqKjRITntscVrWWwqN/LZjUZ6VuXk+Qf7rKK53S5+nsaQvb6ofpnSPfhv/Cw==",
+    "Microsoft.AspNetCore.Mvc.NewtonsoftJson/3.1.18": {
+      "sha512": "kdo7eWDP74ucUvzqIJSizpwMka0AP5i2F1T5WOLzt9G1/8Kh90jwRNZRHIbCPZcgh+tlLQ5xUYD+tWa8ZaEnDA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.9",
+      "path": "microsoft.aspnetcore.mvc.newtonsoftjson/3.1.18",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1784,7 +1784,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
-        "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.9.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.newtonsoftjson.3.1.18.nupkg.sha512",
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
       ]
     },
@@ -2516,10 +2516,10 @@
         "version.txt"
       ]
     },
-    "Newtonsoft.Json/13.0.1": {
-      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.1",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2538,9 +2538,12 @@
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.1.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.2": {
@@ -5874,26 +5877,25 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "FluentValidation.AspNetCore >= 10.3.3",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
-      "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.9",
+      "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.18",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
-      "Newtonsoft.Json >= 13.0.1"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.9"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lina\\.nuget\\packages\\": {}
+    "C:\\Users\\hp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj",
+      "projectUniqueName": "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj",
       "projectName": "SEProjectBE",
-      "projectPath": "E:\\Schneider Internship\\SE Project BE\\SEProjectBE.csproj",
-      "packagesPath": "C:\\Users\\Lina\\.nuget\\packages\\",
-      "outputPath": "E:\\Schneider Internship\\SE Project BE\\obj\\",
+      "projectPath": "D:\\internships\\se\\Project 2\\SEProjectBE\\SEProjectBE.csproj",
+      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+      "outputPath": "D:\\internships\\se\\Project 2\\SEProjectBE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5901,7 +5903,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "E:\\Schneider Internship\\Resources\\ASP code(demo)\\demo\\nugetpackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5934,7 +5935,7 @@
           },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
-            "version": "[3.1.9, )"
+            "version": "[3.1.18, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -5945,10 +5946,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.9, )"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.1, )"
           }
         },
         "imports": [
@@ -5969,7 +5966,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

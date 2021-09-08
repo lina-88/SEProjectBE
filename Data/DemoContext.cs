@@ -11,7 +11,8 @@ namespace SEProjectBE.Data
     {
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<Product> Products { get; set; }
-       
+        public DbSet<Users> Users { get; set; }
+
 
         public DemoContext()
         {
@@ -30,10 +31,20 @@ namespace SEProjectBE.Data
 
                 entity.HasKey(e => e.Id);
 
-
                 entity.HasMany(e => e.Products)
                 .WithOne(e => e.ShoppingCart)
                 .HasForeignKey(e => e.ShoppingCartId);
+            });
+
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.ToTable("Users");
+                entity.HasKey(e => e.Id);
+                /*
+                entity.HasOne(e => e.ShoppingCart)
+                      .WithOne(e => e.Users)
+                      .HasForeignKey(e => e.Id);
+                */
             });
 
 
