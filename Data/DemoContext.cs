@@ -9,7 +9,7 @@ namespace SEProjectBE.Data
 {
     public partial class DemoContext : DbContext
     {
-        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Users> Users { get; set; }
 
@@ -25,27 +25,48 @@ namespace SEProjectBE.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ShoppingCart>(entity =>
+            modelBuilder.Entity<CartItem>(entity =>
             {
-                entity.ToTable("ShoppingCarts");
+                entity.ToTable("CartItems");
 
                 entity.HasKey(e => e.Id);
 
-                entity.HasMany(e => e.Products)
-                .WithOne(e => e.ShoppingCart)
-                .HasForeignKey(e => e.ShoppingCartId);
+            
+
+
+
+
             });
 
             modelBuilder.Entity<Users>(entity =>
             {
                 entity.ToTable("Users");
                 entity.HasKey(e => e.Id);
-                /*
-                entity.HasOne(e => e.ShoppingCart)
-                      .WithOne(e => e.Users)
-                      .HasForeignKey(e => e.Id);
-                */
+
+                entity.HasMany(e => e.Products)
+                .WithOne(e => e.User)
+                .HasForeignKey(e => e.UserId);
+
+
+
+
             });
+
+            modelBuilder.Entity<Product>(entity =>
+            {
+                entity.ToTable("Products");
+
+                entity.HasKey(e => e.Id);
+
+                entity.HasMany(e => e.Users)
+              .WithOne(e => e.Product)
+              .HasForeignKey(e => e.ProductId);
+
+
+
+            });
+
+           
 
 
             OnModelCreatingPartial(modelBuilder);

@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace SEProjectBE.Help.Dto
 {
-    public class ShoppingCartDto
+    public class CartItemDto
     {
-        public int NumberProducts { get; set; }
+  
+        public int NumberOfProducts { get; set; }
         public double TotalPrice { get; set; }
-        public ICollection<ProductDto> Products { get; set; }
+
+        public Users User { get; set; }
+
+     
+        public Product Product { get; set; }
+
+
+       
     }
 }

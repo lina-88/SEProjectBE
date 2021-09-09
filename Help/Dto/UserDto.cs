@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace SEProjectBE.Help.Dto
 {
-    public class ProductDto
+    public class UserDto
     {
-    
+        public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
-
-        public String Picture { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        
     }
 }

@@ -13,7 +13,7 @@ namespace SEProjectBE.Models
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
-        public ShoppingCart ShoppingCart { get; set; }
+        public ICollection<CartItem> Products { get; set; }
     }
 }
 public class UsersValidator : AbstractValidator<Users>
