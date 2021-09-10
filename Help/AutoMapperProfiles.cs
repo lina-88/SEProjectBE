@@ -13,7 +13,6 @@ namespace SEProjectBE.Help
           public AutoMapperProfiles()
         {
 
-            CreateMap<ShoppingCart, ShoppingCartDto>().ReverseMap();
             CreateMap<Product, ProductDto>().ReverseMap();
 
 

@@ -23,20 +23,17 @@ namespace SEProjectBE.Controllers
 
         public ProductController(IMapper mapper, DemoContext context)
         {
-
             this._mapper = mapper;
             this._context = context;
         }
 
-        // GET: api/<ProductController>
+        // GET: api/<Product>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
             {
-                var Product = await _context.Products
-                    
-                    .ToListAsync();
+                var Product = await _context.Products.ToListAsync();
                 return Ok(_mapper.Map<List<ProductDto>>(Product));
 
 
@@ -47,7 +44,7 @@ namespace SEProjectBE.Controllers
             }
         }
 
-        // GET api/<ProductController>/5
+        // GET api/<Product>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -65,7 +62,7 @@ namespace SEProjectBE.Controllers
         }
 
 
-        // POST api/<ProductController>
+        // POST api/<Product>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Product product)
         {
@@ -78,7 +75,7 @@ namespace SEProjectBE.Controllers
 
             return Ok(_mapper.Map<ProductDto>(product));
         }
-        // PUT api/<ProductController>/5
+        // PUT api/<Product>/5
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, [FromBody] Product product)
         {
@@ -103,7 +100,7 @@ namespace SEProjectBE.Controllers
             }
         }
 
-        // DELETE api/<ProductController>/5
+        // DELETE api/<Product>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

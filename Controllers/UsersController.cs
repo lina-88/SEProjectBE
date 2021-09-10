@@ -17,7 +17,15 @@ namespace SEProjectBE.Controllers
         private readonly IMapper _mapper;
         private readonly DemoContext _context;
         public List<Users> _users { get; set; }
-        
+
+
+        public UsersController(IMapper mapper, DemoContext context)
+        {
+            _mapper = mapper;
+            _context = context;
+
+        }
+
         // GET: api/<Users>
         [HttpGet]
         public async Task<IActionResult> Get()
