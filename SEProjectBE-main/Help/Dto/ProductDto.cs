@@ -12,5 +12,7 @@ namespace SEProjectBE.Help.Dto
         public double Price { get; set; }
 
         public String Picture { get; set; }
+        public string category { get; set; }
+
     }
 }

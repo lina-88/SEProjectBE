@@ -27,27 +27,25 @@ namespace SEProjectBE.Controllers
             this._mapper = mapper;
             this._context = context;
         }
-        // GET: api/<CartItemController>
+        // GET: api/<CartItem>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
             {
-                var CartItem = await _context.CartItems
-
-                    .ToListAsync();
+                var CartItem = await _context.CartItems.ToListAsync();
                 return Ok(_mapper.Map<List<CartItemDto>>(CartItem));
 
 
             }
             catch (Exception)
             {
-                return StatusCode(500, new { Error = "Internal happened" });
+                return StatusCode(500, new { Error = "Internal Error happened" });
             }
         }
 
-        // GET api/<CartItemController>/5
-        [HttpGet("{id}")]
+        // GET api/<CartItem>/5
+        [HttpGet("{userId}")]
         public async Task<IActionResult> Get(int userId)
         {
             try
@@ -63,7 +61,7 @@ namespace SEProjectBE.Controllers
             }
         }
 
-        // POST api/<CartItemController>
+        // POST api/<CartItem>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CartItem CartItem)
         {

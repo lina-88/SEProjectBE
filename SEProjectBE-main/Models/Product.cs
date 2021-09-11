@@ -16,6 +16,7 @@ namespace SEProjectBE.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public String Picture { get; set; }
+        public string category { get; set; }
 
 
 
@@ -29,6 +30,7 @@ public class ProductsValidator : AbstractValidator<Product>
         //RuleFor(x => x.Id).NotNull();
         RuleFor(x => x.Name).NotNull().Length(1, 50);
         RuleFor(x => x.Price).NotNull();
+        RuleFor(x => x.category).NotNull();
        
 
     }

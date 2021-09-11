@@ -11,10 +11,7 @@ namespace SEProjectBE.Help.Dto
   
         public int NumberOfProducts { get; set; }
         public double TotalPrice { get; set; }
-
         public Users User { get; set; }
-
-     
         public Product Product { get; set; }
 
 
