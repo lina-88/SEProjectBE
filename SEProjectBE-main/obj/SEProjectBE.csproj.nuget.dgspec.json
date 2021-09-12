@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\internships\\se\\Project 2\\FixedGit\\Backend\\SEProjectBE\\SEProjectBE-main\\SEProjectBE.csproj": {}
+    "E:\\Schneider Internship\\SEProjectBE-main\\SEProjectBE-main\\SEProjectBE.csproj": {}
   },
   "projects": {
-    "D:\\internships\\se\\Project 2\\FixedGit\\Backend\\SEProjectBE\\SEProjectBE-main\\SEProjectBE.csproj": {
+    "E:\\Schneider Internship\\SEProjectBE-main\\SEProjectBE-main\\SEProjectBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\internships\\se\\Project 2\\FixedGit\\Backend\\SEProjectBE\\SEProjectBE-main\\SEProjectBE.csproj",
+        "projectUniqueName": "E:\\Schneider Internship\\SEProjectBE-main\\SEProjectBE-main\\SEProjectBE.csproj",
         "projectName": "SEProjectBE",
-        "projectPath": "D:\\internships\\se\\Project 2\\FixedGit\\Backend\\SEProjectBE\\SEProjectBE-main\\SEProjectBE.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\internships\\se\\Project 2\\FixedGit\\Backend\\SEProjectBE\\SEProjectBE-main\\obj\\",
+        "projectPath": "E:\\Schneider Internship\\SEProjectBE-main\\SEProjectBE-main\\SEProjectBE.csproj",
+        "packagesPath": "C:\\Users\\Lina\\.nuget\\packages\\",
+        "outputPath": "E:\\Schneider Internship\\SEProjectBE-main\\SEProjectBE-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "E:\\Schneider Internship\\Resources\\ASP code(demo)\\demo\\nugetpackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

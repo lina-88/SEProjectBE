@@ -50,10 +50,13 @@ namespace SEProjectBE.Controllers
         {
             try
             {
-                var locatCartItem = await _context.CartItems.Where(pr => pr.UserId == userId).ToListAsync(); ;
+                var locatCartItem = await _context.CartItems.Where(pr => pr.UserId == userId)
+                    .Include(ci => ci.Product)
+                    .ToListAsync(); ;
                 if (locatCartItem == null) return NotFound(new { Error = "not found" });
                 var cartitemdto = _mapper.Map<List<CartItemDto>>(locatCartItem);
                 return Ok(cartitemdto);
+
             }
             catch (Exception)
             {
@@ -77,8 +80,8 @@ namespace SEProjectBE.Controllers
         }
 
         // PUT api/<CartItemController>/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody] CartItem cartItem)
+        [HttpPut("{userid}/{productid}")]
+        public async Task<IActionResult> Put(int userid,int productid, [FromBody] CartItem cartItem)
         {
             try
             {
@@ -86,7 +89,7 @@ namespace SEProjectBE.Controllers
                 {
                     return StatusCode(400, new { Error = "Please enter valid data!" });
                 }
-                var localCartItem = await _context.CartItems.SingleOrDefaultAsync(pr => pr.Id == id);
+                var localCartItem = await _context.CartItems.SingleOrDefaultAsync(pr => pr.UserId == userid && pr.ProductId == productid);
                 _context.Remove(localCartItem);
                 await _context.CartItems.AddAsync(cartItem);
                 await _context.SaveChangesAsync();

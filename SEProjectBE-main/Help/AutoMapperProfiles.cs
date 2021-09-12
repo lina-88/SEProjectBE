@@ -14,7 +14,9 @@ namespace SEProjectBE.Help
         {
 
             CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<CartItem, CartItemDto>().ReverseMap();
+           
+            CreateMap<CartItemDto, CartItem>().ReverseMap()
+                .ForMember(crtdto => crtdto.ProductName, opt => opt.MapFrom(src => src.Product.Name ));
 
 
         }

@@ -14,7 +14,8 @@ namespace SEProjectBE.Help.Dto
         public Users User { get; set; }
         public Product Product { get; set; }
 
+        public string ProductName { get; set; }
 
-       
+
     }
 }
