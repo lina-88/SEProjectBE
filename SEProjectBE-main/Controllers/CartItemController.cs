@@ -40,7 +40,7 @@ namespace SEProjectBE.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500, new { Error = "Internal Error happened" });
+                return StatusCode(500, new { Error = "Internal Error happened when getting all cart items" });
             }
         }
 
@@ -73,15 +73,21 @@ namespace SEProjectBE.Controllers
             {
                 return StatusCode(400, new { Error = "Please enter valid data!" });
             }
+
+            CartItem.User = await _context.Users.SingleOrDefaultAsync(pr => pr.Id == CartItem.User.Id);
+            CartItem.Product = await _context.Products.SingleOrDefaultAsync(pr => pr.Id == CartItem.Product.Id);
+
+
             await _context.CartItems.AddAsync(CartItem);
             await _context.SaveChangesAsync();
+
 
             return Ok(_mapper.Map<CartItemDto>(CartItem));
         }
 
         // PUT api/<CartItemController>/5
         [HttpPut("{userid}/{productid}")]
-        public async Task<IActionResult> Put(int userid,int productid, [FromBody] CartItem cartItem)
+        public async Task<IActionResult> Put(int userid, int productid, [FromBody] CartItem cartItem)
         {
             try
             {
@@ -91,6 +97,10 @@ namespace SEProjectBE.Controllers
                 }
                 var localCartItem = await _context.CartItems.SingleOrDefaultAsync(pr => pr.UserId == userid && pr.ProductId == productid);
                 _context.Remove(localCartItem);
+
+                cartItem.User = await _context.Users.SingleOrDefaultAsync(pr => pr.Id == userid );
+                cartItem.Product = await _context.Products.SingleOrDefaultAsync(pr => pr.Id == userid);
+
                 await _context.CartItems.AddAsync(cartItem);
                 await _context.SaveChangesAsync();
 
@@ -105,12 +115,12 @@ namespace SEProjectBE.Controllers
         }
 
         // DELETE api/<CartItemController>/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete("{userid}/{productid}")]
+        public async Task<IActionResult> Delete(int userid, int productid)
         {
             try
             {
-                var localCartItem = await _context.CartItems.SingleOrDefaultAsync(pr => pr.Id == id);
+                var localCartItem = await _context.CartItems.SingleOrDefaultAsync(pr => pr.UserId == userid && pr.ProductId == productid);
                 if (localCartItem == null) return NotFound(new { Error = "not found" });
                 _context.Remove(localCartItem);
                 await _context.SaveChangesAsync();

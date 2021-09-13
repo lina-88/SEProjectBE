@@ -37,7 +37,7 @@ namespace SEProjectBE.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500, new { Error = "An error happened while getting all students" });
+                return StatusCode(500, new { Error = "An error happened while getting all users" });
             }
         }
 
