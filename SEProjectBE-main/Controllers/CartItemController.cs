@@ -99,7 +99,7 @@ namespace SEProjectBE.Controllers
                 _context.Remove(localCartItem);
 
                 cartItem.User = await _context.Users.SingleOrDefaultAsync(pr => pr.Id == userid );
-                cartItem.Product = await _context.Products.SingleOrDefaultAsync(pr => pr.Id == userid);
+                cartItem.Product = await _context.Products.SingleOrDefaultAsync(pr => pr.Id == productid);
 
                 await _context.CartItems.AddAsync(cartItem);
                 await _context.SaveChangesAsync();
@@ -124,6 +124,7 @@ namespace SEProjectBE.Controllers
                 if (localCartItem == null) return NotFound(new { Error = "not found" });
                 _context.Remove(localCartItem);
                 await _context.SaveChangesAsync();
+
                 return Ok(_mapper.Map<CartItemDto>(localCartItem));
             }
             catch (Exception)
