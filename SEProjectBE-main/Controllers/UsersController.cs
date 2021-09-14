@@ -73,6 +73,7 @@ namespace SEProjectBE.Controllers
 
                 //var users = await _context.Users.ToListAsync();
                 return Ok(user);
+
             }
             catch (Exception)
             {
